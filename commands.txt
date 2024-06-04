@@ -1,0 +1,3 @@
+Powershell
+remove-item -path .git -recurse -force
+get-childitem -force
