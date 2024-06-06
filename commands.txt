@@ -1,3 +1,9 @@
 Powershell
 remove-item -path .git -recurse -force
 get-childitem -force
+
+ffmpeg
+ffmpeg -i input.jpg -vf "scale=WIDTH:-1" output.jpg              // WIDTH = 800 (SAY)
+ffmpeg -i image1.jpg -i image2.jpg -filter_complex "vstack=inputs=2" merged.jpg
+ffmpeg -i merged.jpg -q:v 20 output.jpg
+ffmpeg -i input.png output.jpg
