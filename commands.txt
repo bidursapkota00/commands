@@ -7,3 +7,12 @@ ffmpeg -i input.jpg -vf "scale=WIDTH:-1" output.jpg              // WIDTH = 800 
 ffmpeg -i image1.jpg -i image2.jpg -filter_complex "vstack=inputs=2" merged.jpg
 ffmpeg -i merged.jpg -q:v 20 output.jpg
 ffmpeg -i input.png output.jpg
+
+docker
+docker build .
+docker-compose build        // same thing as above build but using docker-compose.yml config
+docker-compose run --rm app sh -c "django-admin startproject app ."
+docker-compose up             // run services, so localhost website available
+
+flake8 (check linting errors from cmd)
+docker-compose run --rm app sh -c "flake8"
