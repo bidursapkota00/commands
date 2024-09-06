@@ -94,6 +94,14 @@ docker-compose up
 
 - **Description:** Starts all services defined in the `docker-compose.yml` file, making the web application accessible locally.
 
+### Run unit test in Django
+
+```bash
+docker-compose run --rm app sh -c "python manage.py test"
+```
+
+- **Description:** Runs unit test.
+
 ---
 
 ## Flake8
