@@ -39,3 +39,19 @@ docker compose down
 ```
 
 - **Description:** The `docker compose down` command is used to stop and remove containers, networks, & optionally volumes, and images that were created by docker-compose up.
+
+### List volumes
+
+```bash
+docker volume ls
+```
+
+- **Description:** Lists all volumes
+
+### Remove volume
+
+```bash
+docker volume rm volume_name
+```
+
+- **Description:** Removes the volume
