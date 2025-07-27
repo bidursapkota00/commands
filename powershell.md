@@ -23,3 +23,15 @@ $env:PYTHONPATH = "C:\Users\dell\Desktop\test"
 ```
 
 - **Description:** When module not found error occurs in projects
+
+### Unzip all zipped folders recursively
+
+```powershell
+Get-ChildItem -Path "C:\Path\To\Your\MainFolder" -Recurse -Filter *.zip | ForEach-Object {
+    $destination = $_.DirectoryName + "\" + ($_.BaseName)
+    Expand-Archive -LiteralPath $_.FullName -DestinationPath $destination -Force
+}
+
+```
+
+- **Description:** Unzip all zipped folders recursively in a nested folders
