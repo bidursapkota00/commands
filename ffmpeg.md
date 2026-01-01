@@ -1,5 +1,15 @@
 ## FFmpeg
 
+### Convert image to webp
+
+**With resizing and reducing quality**
+
+```bash
+for %f in (*.jpg *.png) do ffmpeg -i "%f" -vf "scale=800:-1" -c:v libwebp -q:v 75 "%~nf.webp"
+```
+
+- **Description:** Converts all jpg or png images in current folder to webp. Resizes the input image to a specified width while maintaining the aspect ratio. Quality is set to 75%.
+
 ### Resize an image to a specific width
 
 ```bash
