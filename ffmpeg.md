@@ -18,6 +18,13 @@ ffmpeg -i input.jpg -vf "scale=WIDTH:-1" output.jpg
 
 - **Description:** Resizes the input image to a specified width while maintaining the aspect ratio. Replace `WIDTH` with your desired value (e.g., 800).
 
+### Resize and convert to webp (macos)
+
+```bash
+# brew install webp
+cwebp -resize 700 0 design-youtube.jpg -o youtube-700.webp
+```
+
 ### Stack two images vertically
 
 ```bash
